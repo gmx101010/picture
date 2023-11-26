@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resize and Fill</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="toolbar">
+    <input type="file" id="imageInput" accept="image/png, image/jpeg">
+    <label for="aspectRatio">Aspect Ratio:</label>
+    <select id="aspectRatio">
+        <option value="1">1:1 (Square)</option>
+        <option value="1.33333">4:3</option>
+        <option value="1.77777">16:9</option>
+    </select>
+    <button id="fillSpace">Fill Space (AI)</button>
+</div>
+
+<div id="imageContainer" class="img-container">
+    <!-- The canvas for displaying the image -->
+    <canvas id="imageCanvas"></canvas>
+
+    <!-- A handle for resizing the image -->
+    <div id="resizeHandle" class="resize-handle"></div>
+</div>
+
+    <div id="errorContainer"></div>
+    <script src="./script.js"></script>
+</body>
+</html>
